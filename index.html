@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta id="viewport" name="viewport" content="width=device-width, user-scable=no"/>
+	<title>Advinhe o número</title>
+	<style type="text/css">
+		.content {
+			width: 100%;
+			max-width: 960px;
+			margin: auto;
+		}
+		.app {
+			width: 100%;
+			max-width: 480px;
+			margin: auto;
+			text-align: center;
+		}
+		#n1 {
+			width: 100%;
+			max-width: 200px; height: 200px; border:1px solid #000;
+			float: left; margin-right: 10px; font-size: 100px;
+			text-align: center; line-height: 200px; 
+			background-color: #EEEEEE;
+		}
+		#n2 {
+			width: 100%;
+			max-width: 200px; height: 200px; border:1px solid #000;
+			float: left; margin-right: 10px; font-size: 100px;
+			text-align: center; line-height: 200px; 
+		}
+		button {
+			width: 100%;
+			max-width: 410px; height: 40px; margin-top: 10px;
+			font-size: 20px;
+		}
+		#resultado{
+			display: block;
+		}
+		#tampa{	
+			left: 250px; top: 191px;
+			width: 100%;
+			max-width: 200px; height: 200px; border:1px solid #000;
+			float: left; margin-right: 10px; font-size: 100px;
+			text-align: center; line-height: 200px;
+			position: absolute;
+			background-color: #EEEEEE;
+			display: block;
+		}
+		.squares {
+			display: flex;
+			justify-content: center;
+		}
+		@media (min-width: 1200px){
+		#tampa{	left: 748px; top: 191px;
+			width: 100%;
+			max-width: 200px; height: 200px; border:1px solid #000;
+			float: left; margin-right: 10px; font-size: 100px;
+			text-align: center; line-height: 200px;
+			position: absolute;
+			background-color: #EEEEEE;
+			display: block;
+		}
+
+		@media (max-width: 1091px){
+		#tampa{	left: 300px; top: 191px;
+			width: 100%;
+			max-width: 200px; height: 200px; border:1px solid #000;
+			float: left; margin-right: 10px; font-size: 100px;
+			text-align: center; line-height: 200px;
+			position: absolute;
+			background-color: #EEEEEE;
+			display: block;
+		}
+		@media (min-width: 941px) and (max-width: 1091px) {
+		#tampa{	
+			left: 250px; top: 191px;
+			width: 100%;
+			max-width: 200px; height: 200px; border:1px solid #000;
+			float: left; margin-right: 10px; font-size: 100px;
+			text-align: center; line-height: 200px;
+			position: absolute;
+			background-color: #EEEEEE;
+			display: block;
+		}
+		}
+		@media (max-width: 420px) {
+		#tampa{	
+			left: 0px; top: 191px;
+			width: 100%;
+			max-width: 200px; height: 200px; border:1px solid #000;
+			float: left; margin-right: 10px; font-size: 100px;
+			text-align: center; line-height: 200px;
+			position: absolute;
+			background-color: #EEEEEE;
+			display: block;
+		}
+
+	</style>
+	<script type="text/javascript" src="./script.js"></script>
+</head>
+<body onload="resetar()">
+	<div class="content">
+		<div class="app">
+			<h1>Advinhe o número,<br/> o número está dentro deste intervalo:<br/>
+			[0, 10] </h1>
+			<div class="squares">
+				<div id="n1">0</div>
+				<input type="number" id="n2"/>
+			</div>
+			<div id="tampa"></div>
+			<div style="clear:both"></div>
+			<button onclick="verificar()">Verificar</button><br/>
+			<button onclick="window.location.href ='index.html';">Resetar</button><br/>
+			<h2 id="resultado"></h2>
+		<div>
+	</div>
+</body>
+</html>
